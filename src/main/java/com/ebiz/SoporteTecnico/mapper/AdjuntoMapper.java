@@ -1,7 +1,7 @@
 package com.ebiz.SoporteTecnico.mapper;
 
-import com.ebiz.SoporteTecnico.controller.dto.entrada.AdjuntoRequestDTO;
-import com.ebiz.SoporteTecnico.controller.dto.salida.AdjuntoResponseDTO;
+import com.ebiz.SoporteTecnico.service.dto.entrada.AdjuntoRequestDTO;
+import com.ebiz.SoporteTecnico.service.dto.salida.AdjuntoResponseDTO;
 import com.ebiz.SoporteTecnico.entity.Adjunto;
 import com.ebiz.SoporteTecnico.entity.Ticket;
 import org.springframework.stereotype.Component;

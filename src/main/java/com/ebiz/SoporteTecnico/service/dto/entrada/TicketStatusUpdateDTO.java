@@ -1,4 +1,4 @@
-package com.ebiz.SoporteTecnico.controller.dto.entrada;
+package com.ebiz.SoporteTecnico.service.dto.entrada;
 
 import com.ebiz.SoporteTecnico.entity.enums.Estado;
 import jakarta.validation.constraints.NotNull;

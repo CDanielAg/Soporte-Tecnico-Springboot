@@ -1,4 +1,4 @@
-package com.ebiz.SoporteTecnico.controller.dto.salida;
+package com.ebiz.SoporteTecnico.service.dto.salida;
 
 import lombok.Data;
 

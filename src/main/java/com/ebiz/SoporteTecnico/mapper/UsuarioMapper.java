@@ -1,7 +1,7 @@
 package com.ebiz.SoporteTecnico.mapper;
 
-import com.ebiz.SoporteTecnico.controller.dto.entrada.UsuarioRegistroDTO;
-import com.ebiz.SoporteTecnico.controller.dto.salida.UsuarioDTO;
+import com.ebiz.SoporteTecnico.service.dto.entrada.UsuarioRegistroDTO;
+import com.ebiz.SoporteTecnico.service.dto.salida.UsuarioDTO;
 import com.ebiz.SoporteTecnico.entity.Usuario;
 import org.springframework.stereotype.Component;
 

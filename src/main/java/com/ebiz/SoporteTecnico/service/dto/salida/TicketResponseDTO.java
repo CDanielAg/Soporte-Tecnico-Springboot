@@ -1,4 +1,4 @@
-package com.ebiz.SoporteTecnico.controller.dto.salida;
+package com.ebiz.SoporteTecnico.service.dto.salida;
 
 import com.ebiz.SoporteTecnico.entity.enums.Estado;
 import com.ebiz.SoporteTecnico.entity.enums.Prioridad;

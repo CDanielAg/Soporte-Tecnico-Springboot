@@ -1,4 +1,4 @@
-package com.ebiz.SoporteTecnico.controller.dto.entrada;
+package com.ebiz.SoporteTecnico.service.dto.entrada;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;

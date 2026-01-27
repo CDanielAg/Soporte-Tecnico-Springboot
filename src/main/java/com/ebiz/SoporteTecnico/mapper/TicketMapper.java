@@ -1,7 +1,7 @@
 package com.ebiz.SoporteTecnico.mapper;
 
-import com.ebiz.SoporteTecnico.controller.dto.entrada.TicketRequestDTO;
-import com.ebiz.SoporteTecnico.controller.dto.salida.TicketResponseDTO;
+import com.ebiz.SoporteTecnico.service.dto.entrada.TicketRequestDTO;
+import com.ebiz.SoporteTecnico.service.dto.salida.TicketResponseDTO;
 import com.ebiz.SoporteTecnico.entity.Ticket;
 import com.ebiz.SoporteTecnico.entity.Usuario;
 import com.ebiz.SoporteTecnico.entity.enums.Estado;
