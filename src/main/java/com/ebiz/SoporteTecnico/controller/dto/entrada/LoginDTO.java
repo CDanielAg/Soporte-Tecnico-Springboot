@@ -1,0 +1,13 @@
+package com.ebiz.SoporteTecnico.controller.dto.entrada;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
+
+@Data
+public class LoginDTO {
+    @NotBlank(message = "Usuario requerido")
+    private String usuario;
+
+    @NotBlank(message = "Contraseña requerida")
+    private String password;
+}
