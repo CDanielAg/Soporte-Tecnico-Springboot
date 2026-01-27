@@ -8,6 +8,8 @@ import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/auth")
 @CrossOrigin(origins = "http://localhost:3000")
@@ -29,5 +31,10 @@ public class UsuarioController {
     public ResponseEntity<UsuarioDTO> login(@Valid @RequestBody LoginDTO loginDTO) {
         UsuarioDTO usuario = usuarioService.login(loginDTO);
         return ResponseEntity.ok(usuario);
+    }
+
+    @GetMapping("/usuarios")
+    public ResponseEntity<List<UsuarioDTO>> listarTodos() {
+        return ResponseEntity.ok(usuarioService.listarTodos());
     }
 }

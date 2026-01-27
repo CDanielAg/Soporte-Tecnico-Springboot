@@ -8,6 +8,9 @@ import com.ebiz.SoporteTecnico.mapper.UsuarioMapper;
 import com.ebiz.SoporteTecnico.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class UsuarioService {
 
@@ -50,5 +53,11 @@ public class UsuarioService {
     public Usuario buscarPorId(Long id) {
         return usuarioRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Usuario no encontrado con ID: " + id));
+    }
+
+    public List<UsuarioDTO> listarTodos() {
+        return usuarioRepository.findAll().stream()
+                .map(usuarioMapper::toDTO)
+                .collect(Collectors.toList());
     }
 }
