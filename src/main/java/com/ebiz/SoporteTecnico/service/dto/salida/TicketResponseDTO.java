@@ -18,6 +18,5 @@ public class TicketResponseDTO {
     private LocalDateTime updatedAt;
     private UsuarioDTO creador;
     private UsuarioDTO tecnicoAsignado;
-    private List<AdjuntoResponseDTO> adjuntos;
     private List<ComentarioResponseDTO> comentarios;
 }

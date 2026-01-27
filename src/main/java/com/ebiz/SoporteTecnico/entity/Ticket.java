@@ -48,8 +48,5 @@ public class Ticket {
     private Usuario tecnicoAsignado;
 
     @OneToMany(mappedBy = "ticket", cascade = CascadeType.ALL)
-    private List<Adjunto> adjuntos;
-
-    @OneToMany(mappedBy = "ticket", cascade = CascadeType.ALL)
     private List<Comentario> comentarios;
 }
