@@ -26,6 +26,9 @@ public class Usuario {
     @Enumerated(EnumType.STRING)
     private Rol rol;
 
-    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
-    private List<Ticket> tickets;
+    @OneToMany(mappedBy = "creador", cascade = CascadeType.ALL)
+    private List<Ticket> ticketsCreados;
+
+    @OneToMany(mappedBy = "tecnicoAsignado")
+    private List<Ticket> ticketsAsignados;
 }

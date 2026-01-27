@@ -2,7 +2,7 @@ spring:
   application:
     name: bootcamp
   datasource:
-    url: jdbc:postgresql://localhost:5432/SoporteTecnico
+    url: jdbc:postgresql://localhost:5432/soportetecnico
     username: postgres
     password: admin123
   jpa:
