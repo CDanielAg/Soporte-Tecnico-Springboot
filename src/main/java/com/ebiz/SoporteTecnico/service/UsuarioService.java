@@ -1,5 +1,6 @@
 package com.ebiz.SoporteTecnico.service;
 
+import com.ebiz.SoporteTecnico.entity.enums.Rol;
 import com.ebiz.SoporteTecnico.service.dto.entrada.LoginDTO;
 import com.ebiz.SoporteTecnico.service.dto.entrada.UsuarioRegistroDTO;
 import com.ebiz.SoporteTecnico.service.dto.salida.UsuarioDTO;
@@ -57,6 +58,12 @@ public class UsuarioService {
 
     public List<UsuarioDTO> listarTodos() {
         return usuarioRepository.findAll().stream()
+                .map(usuarioMapper::toDTO)
+                .collect(Collectors.toList());
+    }
+
+    public List<UsuarioDTO> listarTecnicos() {
+        return usuarioRepository.findByRol(Rol.valueOf("TECNICO")).stream()
                 .map(usuarioMapper::toDTO)
                 .collect(Collectors.toList());
     }

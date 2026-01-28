@@ -32,6 +32,10 @@ public class UsuarioController {
         UsuarioDTO usuario = usuarioService.login(loginDTO);
         return ResponseEntity.ok(usuario);
     }
+    @GetMapping("/tecnicos")
+    public ResponseEntity<List<UsuarioDTO>> tecnicos(@Valid @RequestBody LoginDTO loginDTO) {
+        return  ResponseEntity.ok(usuarioService.listarTecnicos());
+    }
 
     @GetMapping("/usuarios")
     public ResponseEntity<List<UsuarioDTO>> listarTodos() {

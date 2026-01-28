@@ -83,4 +83,10 @@ public class TicketService {
 
         return ticketMapper.toDTO(ticketRepository.save(ticket));
     }
+
+    public TicketResponseDTO obtenerPorId(Long ticketId) {
+        Ticket ticket = ticketRepository.findById(ticketId)
+                .orElseThrow(() -> new RuntimeException("Ticket no encontrado"));
+        return ticketMapper.toDTO(ticket);
+    }
 }

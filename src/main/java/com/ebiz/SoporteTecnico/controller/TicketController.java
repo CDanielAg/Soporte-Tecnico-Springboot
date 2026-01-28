@@ -31,6 +31,12 @@ public class TicketController {
         return ResponseEntity.ok(ticketService.listarTickets(usuarioId));
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<TicketResponseDTO> buscar(@PathVariable Long id) {
+        return ResponseEntity.ok(ticketService.obtenerPorId(id));
+    }
+
+
     @PatchMapping("/{id}/estado")
     public ResponseEntity<TicketResponseDTO> cambiarEstado(@PathVariable Long id,
                                                            @Valid @RequestBody TicketStatusUpdateDTO updateDTO) {
