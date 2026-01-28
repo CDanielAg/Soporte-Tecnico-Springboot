@@ -33,9 +33,6 @@ public class UsuarioService {
 
         Usuario usuario = usuarioMapper.toEntity(registroDTO);
 
-        // String passwordEncriptada = passwordEncoder.encode(registroDTO.getPassword());
-        // usuario.setPassword(passwordEncriptada);
-
         Usuario usuarioGuardado = usuarioRepository.save(usuario);
         return usuarioMapper.toDTO(usuarioGuardado);
     }
@@ -63,7 +60,7 @@ public class UsuarioService {
     }
 
     public List<UsuarioDTO> listarTecnicos() {
-        return usuarioRepository.findByRol(Rol.valueOf("TECNICO")).stream()
+        return usuarioRepository.findByRol("TECNICO").stream()
                 .map(usuarioMapper::toDTO)
                 .collect(Collectors.toList());
     }

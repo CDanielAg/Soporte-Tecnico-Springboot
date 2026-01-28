@@ -33,7 +33,7 @@ public class UsuarioController {
         return ResponseEntity.ok(usuario);
     }
     @GetMapping("/tecnicos")
-    public ResponseEntity<List<UsuarioDTO>> tecnicos(@Valid @RequestBody LoginDTO loginDTO) {
+    public ResponseEntity<List<UsuarioDTO>> tecnicos() {
         return  ResponseEntity.ok(usuarioService.listarTecnicos());
     }
 
